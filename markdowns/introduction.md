@@ -8,9 +8,9 @@ L'exemple donné ci-après définit un nouveau type structuré `struct date`.
 
 ```c 
 struct date {
-	int jour;
-	int mois;
-	int annee;
+   int jour;
+   int mois;
+   int annee;
 }
 ```
 
