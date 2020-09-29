@@ -2,7 +2,7 @@
 
 ## Définition
 
-Le mot-clé `struct` est utilisé pour définir une structure. Un exemple est donnée ci-après. 
+Le mot-clé `struct` est utilisé pour définir un type structuré (on dira plus simplement "une structure"). L'exemple donné ci-après définit un nouveau type structuré `struct date`. 
 
 ```c 
 struct date {
@@ -12,13 +12,15 @@ struct date {
 }
 ```
 
-La structure définie ci-dessous en composée de 3 parties. Il s'agit de 3 variables entière nommée `jour`, `mois` et `annee`.
+La structure définie ci-dessus est composée de 3 parties. Il s'agit de 3 variables entière nommées `jour`, `mois` et `annee`.
+
+Chaque "partie" de la structure s'appelle un "champ". De sorte que la structure de type `struct date` définie ci-dessus possède 3 champs de type int nommés  `jour`, `mois` et `annee`.
 
 ## Déclaration
 
-Pour déclarer une variable de type `struct`, il faut 
-- que le type ai été défini précédemment
-- et utiliser la syntaxe ci-après.
+Pour déclarer une variable de type `struct`, il faut :
+- Que le type ait été défini précédemment (cf. partie *Définition* ci-dessus);
+- Et utiliser la syntaxe ci-après.
 
 ```c
 struct date creation;
@@ -28,27 +30,50 @@ La syntaxe ci-dessus déclare une variable nommée `creation` qui est du type `s
 
 ## Affectation
 
-Pour affecter ou accéder au contenu d'une variable de type `struct`, il existe 2 syntaxes selon que la variable est un point ou non.
+Pour accéder aux champs d'une variable de type `struct`, on utilise l'opérateur `.` :
 
-### Variable
+### Affectation d'une valeur à un champ d'une structure
 ```c
-//Si creation est un variable simple
+//Si creation est définie comme ci-dessus :
 
 creation.jour = 5;
 creation.mois = 8;
-creation.annee = 1985;
+
+printf("choisi l'annee : ");
+scanf("%d", creation.annee);
 ```
 
-Pour accéder à chaque partie de la structure, on utilise l'opérateur `.`.
-
-### Pointeur
-
+### Lecture d'une valeur dans un champ d'une structure
 ```c
-//Si creation est un pointeur
+//Si creation est définie et initialisée comme ci-dessus :
 
-creation->jour = 5;
-creation->mois = 8;
-creation->annee = 1985;
+printf("date de creation : %d/%d/%d\n",creation.jour, creation.mois, creation.annee);
 ```
 
-Pour accéder à chaque partie de la structure, on utilise l'opérateur `->`.
+## L'exemple complet :
+
+```c 
+#include <stdio.h>
+#include <stdlib.h>
+
+struct date {
+	int jour;
+	int mois;
+	int annee;
+}
+
+int main() {
+   struct date creation;
+
+   creation.jour = 5;
+   creation.mois = 8;
+   
+   printf("choisi l'annee : ");
+   scanf("%d", creation.annee);
+   
+   printf("date de creation : %d/%d/%d\n",creation.jour, creation.mois, creation.annee);
+
+   return 0;
+}
+
+```
