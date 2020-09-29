@@ -2,7 +2,9 @@
 
 ## Définition
 
-Le mot-clé `struct` est utilisé pour définir un type structuré (on dira plus simplement "une structure"). L'exemple donné ci-après définit un nouveau type structuré `struct date`. 
+Le mot-clé `struct` est utilisé pour définir un type structuré (on dira plus simplement "une structure").
+
+L'exemple donné ci-après définit un nouveau type structuré `struct date`. 
 
 ```c 
 struct date {
