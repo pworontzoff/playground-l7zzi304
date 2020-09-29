@@ -1,4 +1,26 @@
-title: Simple C Template
+title: Les structures
 plan:
-- title: C Snippet
-  statement: statement.md
+- title: Introduction
+  statement: markdowns/introduction.md
+- title: Exercice 1
+  statement: markdowns/ex1.md
+- title: Exercice 2
+  statement: markdowns/ex2.md
+- title: Exercice 3
+  statement: markdowns/ex3.md
+projects:
+  aff_struct:
+    root: /aff_struct
+    runner:
+      name: techio/cmake-gcc-runner
+      version: latest
+  encode_struct:
+    root: /encode_struct
+    runner:
+      name: techio/cmake-gcc-runner
+      version: latest      
+  compare:
+    root: /compare
+    runner:
+      name: techio/cmake-gcc-runner
+      version: latest  
