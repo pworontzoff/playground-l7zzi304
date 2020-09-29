@@ -39,7 +39,7 @@ Pour accéder aux champs d'une variable de type `struct`, on utilise l'opérateu
 creation.jour = 5;
 creation.mois = 8;
 
-printf("choisi l'annee : ");
+printf("choisir l'annee : ");
 scanf("%d", &creation.annee);
 ```
 (Si creation est définie comme ci-dessus.)
@@ -68,7 +68,7 @@ int main() {
    creation.jour = 5;
    creation.mois = 8;
    
-   printf("choisi l'annee : ");
+   printf("choisir l'annee : ");
    scanf("%d", creation.annee);
    
    printf("date de creation : %d/%d/%d\n",creation.jour, creation.mois, creation.annee);
