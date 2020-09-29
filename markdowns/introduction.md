@@ -1,6 +1,6 @@
-# Rappel
+# Les types strcuturés
 
-## Définition
+## Définition d'un nouveau type structuré
 
 Le mot-clé `struct` est utilisé pour définir un type structuré (on dira plus simplement "une structure").
 
@@ -18,7 +18,7 @@ La structure définie ci-dessus est composée de 3 parties. Il s'agit de 3 varia
 
 Chaque "partie" de la structure s'appelle un "champ". De sorte que la structure de type `struct date` définie ci-dessus possède 3 champs de type int nommés  `jour`, `mois` et `annee`.
 
-## Déclaration
+## Déclaration d'une variable de type structuré
 
 Pour déclarer une variable de type `struct`, il faut :
 - Que le type ait été défini précédemment (cf. partie *Définition* ci-dessus);
