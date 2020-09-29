@@ -42,7 +42,7 @@ creation.jour = 5;
 creation.mois = 8;
 
 printf("choisi l'annee : ");
-scanf("%d", creation.annee);
+scanf("%d", &creation.annee);
 ```
 
 ### Lecture d'une valeur dans un champ d'une structure
