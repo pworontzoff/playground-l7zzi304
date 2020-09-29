@@ -36,21 +36,19 @@ Pour accéder aux champs d'une variable de type `struct`, on utilise l'opérateu
 
 ### Affectation d'une valeur à un champ d'une structure
 ```c
-//Si creation est définie comme ci-dessus :
-
 creation.jour = 5;
 creation.mois = 8;
 
 printf("choisi l'annee : ");
 scanf("%d", &creation.annee);
 ```
+(Si creation est définie comme ci-dessus.)
 
 ### Lecture d'une valeur dans un champ d'une structure
 ```c
-//Si creation est définie et initialisée comme ci-dessus :
-
 printf("date de creation : %d/%d/%d\n",creation.jour, creation.mois, creation.annee);
 ```
+(Si creation est définie et initialisée comme ci-dessus.)
 
 ## L'exemple complet :
 
